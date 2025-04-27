@@ -69,5 +69,12 @@ Infrastructure as Code project to provision and deploy a static website on AWS S
 - Click on Modules Tab -> Click on Add Module -> Select Github(github-terraform-modules) (PRE-POPULATED) -> Select it
 - **Choose a Repository:** terraform-module-s3-website
 - Click on **Publish Module**
+<br>
+<img src="images/Terraform-modules-1-image.png" alt="run" width="500" height="300">
+<br> 
+<br>
+<img src="images/Terraform-modules-2-image.png" alt="run" width="500" height="300">
+<br> 
+
 
 
