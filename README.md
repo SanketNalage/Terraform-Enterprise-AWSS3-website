@@ -32,3 +32,42 @@ Infrastructure as Code project to provision and deploy a static website on AWS S
 <br>  
 
 
+## Step-03: Add VCS Provider as Github using OAuth App in Terraform Cloud
+- Login to Terraform Cloud
+- Click on Modules Tab -> Click on Add Module -> Select Github(custom)
+- Should redirect to URL: https://github.com/settings/applications/new in new browser tab
+- **Application Name:** HCP Terraform (sanket-org) 
+- **Homepage URL:**	https://app.terraform.io 
+- **Application description:**	Terraform Cloud Integration with Github using OAuth 
+- **Authorization callback URL:**	https://app.terraform.io/auth/f53695b8-9733-40f0-9853-89cb5396610b/callback 
+- Click on **Register Application**
+- Make a note of Client ID: 97e5219d6edd8986817e (Sample for reference)
+- Generate new Client Secret: abcdefghijklmnopqrstuvwxyx
+
+<br>
+<img src="images/Terraform-Org-image.png" alt="run" width="500" height="300">
+<br> 
+<br>
+<img src="images/Terraform-modules-image.png" alt="run" width="500" height="300">
+<br> 
+
+## Step-04: Add the below in Terraform Cloud
+- Name: github-terraform-modules
+- Client ID: 97e5219d6edd8986817e
+- Client Secret: abcdefghijklmnopqrstuvwxyx
+- Click on **Connect and Continue**
+- Authorize Terraform Cloud (hctaprep) - Click on **Authorize StackSimplify**
+- SSH Keypair (Optional): click on **Skip and Finish**
+<br>
+<img src="images/Terraform-VCS-image.png" alt="run" width="500" height="300">
+<br> 
+
+## Step-05: Import the Terraform Module from Github
+- In above step, we have completed the VCS Setup with github
+- Now lets go ahead and import the Terraform module from Github
+- Login to Terraform Cloud
+- Click on Modules Tab -> Click on Add Module -> Select Github(github-terraform-modules) (PRE-POPULATED) -> Select it
+- **Choose a Repository:** terraform-module-s3-website
+- Click on **Publish Module**
+
+
